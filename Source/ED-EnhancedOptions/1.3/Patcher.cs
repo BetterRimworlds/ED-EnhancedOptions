@@ -18,7 +18,7 @@ namespace EnhancedDevelopment.EnhancedOptions
         {
             string _LogLocation = "EnhancedOptions.Patcher.Patcher(): ";
 
-            Log.Message(_LogLocation + "Starting Patching.");           
+            Log.Message(_LogLocation + "Starting Patching.");
 
             //Create List of Patches
             List<Patch> _Patches = new List<Patch>();
@@ -48,7 +48,9 @@ namespace EnhancedDevelopment.EnhancedOptions
 
             //Create Harmony Instance
 
-            Harmony _Harmony = new HarmonyLib.Harmony("EnhancedDevelopment.EnhancedOptions");
+            Harmony _Harmony = new HarmonyLib.Harmony("BetterRimworlds.EnhancedOptions");
+            // Harmony _Harmony = new HarmonyLib.Harmony("EnhancedDevelopment.WarningOptions");
+            // Harmony _Harmony = new HarmonyLib.Harmony("EnhancedDevelopment.WarningOptions");
 
             //Iterate Patches
             _Patches.ForEach(p => p.ApplyPatchIfRequired(_Harmony));
